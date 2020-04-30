@@ -1,12 +1,16 @@
 import React from "react";
 import "./App.css";
+import { Router } from "@reach/router";
+import Home from "./pages/home";
+import SingleProject from "./pages/singleProject";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Portfolio</h1>
-      </header>
+      <Router>
+        <Home path="/" />
+        <SingleProject path="projects/:slug" />
+      </Router>
     </div>
   );
 }
