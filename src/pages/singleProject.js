@@ -1,6 +1,5 @@
 import React from "react";
 import client from "../contentful";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const SingleProject = (props) => {
   const [project, setProject] = React.useState(null);
@@ -13,7 +12,6 @@ const SingleProject = (props) => {
       })
       .then((entries) => {
         setProject(entries.items[0]);
-        console.log(entries.items);
       });
   }, [props.slug]);
 
