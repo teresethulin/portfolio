@@ -1,5 +1,6 @@
 import React from "react";
 import client from "../contentful";
+import Wrapper from "../components/Wrapper";
 
 const SingleProject = (props) => {
   const [project, setProject] = React.useState(null);
@@ -20,7 +21,7 @@ const SingleProject = (props) => {
   }
 
   return (
-    <div>
+    <Wrapper>
       <h1>{project.fields.title}</h1>
       <p>{project.fields.info}</p>
       {
@@ -28,13 +29,13 @@ const SingleProject = (props) => {
           src={project.fields.coverImage.fields.file.url}
           alt=""
           style={{
-            width: "auto",
-            height: "80vh",
+            width: "90vw",
+            height: "auto",
             objectFit: "cover",
           }}
         />
       }
-    </div>
+    </Wrapper>
   );
 };
 

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "@reach/router";
 import client from "../contentful";
-import Title from "./../components/Title";
+import Title from "../components/Title";
 import CoverImage from "../components/CoverImage";
-import HomeWrapper from "../components/HomeWrapper";
+import Wrapper from "../components/Wrapper";
 
 const Home = () => {
   const [projects, setProjects] = React.useState(null);
@@ -23,7 +23,8 @@ const Home = () => {
   }
 
   return (
-    <HomeWrapper>
+    <Wrapper>
+      <h1>Portfolio</h1>
       {projects.map((project, i) => {
         return (
           <Link to={project.fields.slug} key={i}>
@@ -36,7 +37,7 @@ const Home = () => {
           </Link>
         );
       })}
-    </HomeWrapper>
+    </Wrapper>
   );
 };
 

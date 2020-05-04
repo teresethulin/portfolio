@@ -2,13 +2,23 @@ import React from "react";
 import { Router } from "@reach/router";
 import Home from "./pages/home";
 import SingleProject from "./pages/singleProject";
+import About from "./pages/about";
+import Menu from "./components/Menu";
+import Burger from "./components/Burger";
 
 function App() {
+  const [open, setOpen] = React.useState(false);
+
   return (
-    <Router>
-      <Home path="/" />
-      <SingleProject path="/:slug" />
-    </Router>
+    <div>
+      <Burger open={open} setOpen={setOpen} />
+      <Menu open={open} setOpen={setOpen} />
+      <Router>
+        <Home path="/" />
+        <SingleProject path="/:slug" />
+        <About path="/about" />
+      </Router>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const HomeWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,4 +12,4 @@ const HomeWrapper = styled.div`
   padding: 5vh 5vw;
 `;
 
-export default HomeWrapper;
+export default Wrapper;

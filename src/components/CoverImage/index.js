@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const StyledCoverImage = styled.div`
   margin: 0;
-  padding: 5vh 0;
+  padding-bottom: 5vh;
   width: 90vw;
   img {
     width: 100%;
