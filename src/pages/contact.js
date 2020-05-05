@@ -13,7 +13,6 @@ const Contact = () => {
       .then((entries) => {
         setDetail(entries.items[0]);
       });
-    console.log(detail);
   }, []);
 
   if (!detail) {

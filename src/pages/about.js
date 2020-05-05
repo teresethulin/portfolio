@@ -14,7 +14,6 @@ const About = () => {
         setPage(entries.items[0]);
       });
   }, []);
-  console.log(page);
 
   if (!page) {
     return <h6>Loading...</h6>;

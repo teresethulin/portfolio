@@ -6,11 +6,11 @@ const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: pink;
+  background: peachpuff;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   height: 100vh;
   text-align: left;
-  padding: 2rem;
+  padding: 4rem;
   position: absolute;
   top: 0;
   right: 0;
