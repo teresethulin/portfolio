@@ -9,6 +9,8 @@
 }
 
 .cover-image-title {
+    @include heading();
+
     font-family: 'Sporting Grotesque_Bold';
     letter-spacing: -0.05em;
 }
