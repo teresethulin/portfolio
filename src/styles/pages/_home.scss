@@ -2,8 +2,8 @@
     color: #0000ff;
     text-decoration: none;
     
-    :hover {
-        background-color: rgba(0, 0, 255, 0.025);
+    &:hover {
+        background-color: rgba(0, 0, 255, 0.08);
         transition: background-color ease-in 0.2s;
     }
 }

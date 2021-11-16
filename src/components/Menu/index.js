@@ -15,8 +15,7 @@ const StyledMenu = styled.nav`
   height: 100vh;
   margin: 0;
   padding: 4rem;
-  background: #7d90f6;
-  backdrop-filter: blur(20px);
+  background: #0000ff;
   text-align: left;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.3s ease-in-out;
@@ -31,7 +30,7 @@ const StyledMenu = styled.nav`
     font-size: 40px;
     line-height: 40px;
     letter-spacing: 0.001em;
-    color: #0000ff;
+    color: white;
     text-decoration: none;
     transition: color 0.3s linear;
 
