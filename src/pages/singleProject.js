@@ -18,8 +18,8 @@ const SingleProject = (props) => {
 
   return (
     <Wrapper>
-      <h1>{project && project.fields.title}</h1>
-      <p>{project && project.fields.info}</p>
+      <h1 className="project-title">{project && project.fields.title}</h1>
+      <p className="project-text">{project && project.fields.info}</p>
       {
         <img
           src={project && project.fields.coverImage.fields.file.url}

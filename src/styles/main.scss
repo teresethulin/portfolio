@@ -1,8 +1,10 @@
 @import 'abstracts/mixins';
+@import 'abstracts/typography';
 
 @import 'base/fonts';
 
 @import 'pages/home';
 @import 'pages/about';
+@import 'pages/singleProject';
 
 @import 'layout/nav';

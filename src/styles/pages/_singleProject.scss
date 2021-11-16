@@ -1,0 +1,7 @@
+.project-title {
+    @include h1();
+}
+
+.project-text {
+    @include paragraph();
+}
