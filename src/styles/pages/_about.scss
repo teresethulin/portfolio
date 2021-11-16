@@ -1,6 +1,19 @@
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: calc(10vh + 70px) 12vw 10vh;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+}
+
 .img-about {
     width: 100%;
     height: auto;
+    margin-bottom: 20px;
     object-fit: cover;
     border-radius: 2px;
 
@@ -14,7 +27,7 @@
     
     width: 100%;
 
-    @media screen and (min-width: 768px) {
-        max-width: 800px;
-    }
+    // @media screen and (min-width: 768px) {
+    //     padding: 10vh 10vw;
+    // }
 }

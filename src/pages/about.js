@@ -1,6 +1,5 @@
 import React from 'react';
 import client from '../contentful';
-import Wrapper from '../components/Wrapper';
 
 const About = () => {
   const [page, setPage] = React.useState(null);
@@ -16,7 +15,7 @@ const About = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <section className="about-wrapper">
       <img
         src={page && page.fields.image.fields.file.url}
         alt={page && page.fields.image.fields.title}
@@ -35,7 +34,7 @@ const About = () => {
             );
           })}
       </section>
-    </Wrapper>
+    </section>
   );
 };
 
