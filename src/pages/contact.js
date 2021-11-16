@@ -1,6 +1,5 @@
 import React from 'react';
 import client from '../contentful';
-import Wrapper from '../components/Wrapper';
 
 const Contact = () => {
   const [detail, setDetail] = React.useState(null);
@@ -16,11 +15,11 @@ const Contact = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <section className="contact-wrapper">
       <h1>{detail && detail.fields.title}</h1>
       <p>{detail && detail.fields.text}</p>
       <p>{detail && detail.fields.email}</p>
-    </Wrapper>
+    </section>
   );
 };
 

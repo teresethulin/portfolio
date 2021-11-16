@@ -1,0 +1,15 @@
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: calc(10vh + 70px) 12vw 10vh;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+}
+
+p {
+    @include paragraph();
+}
