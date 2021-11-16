@@ -6,6 +6,7 @@ import SingleProject from './pages/singleProject';
 import About from './pages/about';
 import Contact from './pages/contact';
 import NavBar from './components/NavBar.js';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <About path="/about" />
         <Contact path="/contact" />
       </Router>
+      <Footer />
     </div>
   );
 }

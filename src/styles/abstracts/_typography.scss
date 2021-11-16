@@ -22,3 +22,12 @@
     font-weight: 400;
     font-style: normal;
 }
+
+@mixin caption() {
+    font-family: synthese, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-style: normal;
+}

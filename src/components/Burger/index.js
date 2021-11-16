@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledBurger = styled.button`
+  z-index: 10;
   position: absolute;
   top: 11px;
   right: 20px;

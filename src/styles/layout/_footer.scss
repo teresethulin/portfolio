@@ -1,0 +1,44 @@
+footer {
+    z-index: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 30vh;
+    padding: 5vh 20px 0;
+    background-color: white;
+    color: #0000ff;
+    border-top: 1px solid blue;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 10vh;
+    }
+}
+
+.caption {
+    @include caption();
+
+    text-align: center;
+}
+
+.icons-wrapper {
+    position: absolute;
+    bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin-top: 5vh;
+
+    .icon {
+        width: 24px;
+        height: auto;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
