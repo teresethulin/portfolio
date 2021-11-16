@@ -11,6 +11,8 @@ const StyledCoverImage = styled.section`
   margin: 0;
   padding: 5vh 5vw;
   text-decoration: none;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
 
   img {
     width: auto;
@@ -24,7 +26,7 @@ const StyledCoverImage = styled.section`
 const CoverImage = (props) => {
   return (
     <StyledCoverImage>
-      <h2 className="cover-image-title">{props.alt}</h2>
+      <h1 className="cover-image-title">{props.alt}</h1>
       <img src={props.image} alt={props.alt} />
     </StyledCoverImage>
   );

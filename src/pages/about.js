@@ -37,18 +37,14 @@ const About = () => {
     ],
   };
 
-  if (!page) {
-    return <h6 className="loading-text">Loading...</h6>;
-  }
-
   return (
     <Wrapper>
-      <h1>{page.fields.title}</h1>
       <img
-        src={page.fields.image.fields.file.url}
-        alt={page.fields.image.fields.title}
+        src={page && page.fields.image.fields.file.url}
+        alt={page && page.fields.image.fields.title}
         className="img-about"
       />
+      <h1>{page && page.fields.title}</h1>
       <section className="text-wrapper">
         {documentToReactComponents(document)}
       </section>

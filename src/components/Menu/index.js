@@ -51,7 +51,7 @@ const Menu = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open}>
       <Link to="/" onClick={() => setOpen(!open)}>
-        Home
+        Projects
       </Link>
       <Link to="/about" onClick={() => setOpen(!open)}>
         About
