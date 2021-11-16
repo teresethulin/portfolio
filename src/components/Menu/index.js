@@ -15,8 +15,9 @@ const StyledMenu = styled.nav`
   height: 100vh;
   margin: 0;
   padding: 4rem;
-  background: #0000ff;
+  background-color: white;
   text-align: left;
+  border-left: 1px solid #0000ff;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.3s ease-in-out;
 
@@ -29,7 +30,7 @@ const StyledMenu = styled.nav`
     font-size: 40px;
     line-height: 40px;
     letter-spacing: 0.001em;
-    color: white;
+    color: #0000ff;
     text-decoration: none;
     transition: color 0.3s linear;
 
@@ -39,8 +40,8 @@ const StyledMenu = styled.nav`
     }
 
     &:hover {
-      color: rgba(255, 255, 255, 0.7);
-      transition: color ease-in 0.2s;
+      opacity: 0.5;
+      transition: opacity ease-in 0.2s;
     }
   }
 `;
