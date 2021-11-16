@@ -1,1 +1,6 @@
-@import './styles/about.scss';
+@import './styles/about';
+@import './styles/home';
+
+* {
+    box-sizing: border-box;
+}

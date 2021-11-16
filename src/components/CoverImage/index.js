@@ -2,28 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const StyledCoverImage = styled.div`
+const StyledCoverImage = styled.section`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90vw;
+  width: 100%;
   margin: 0;
-  padding-bottom: 5vh;
+  padding: 5vh 5vw;
+  text-decoration: none;
+
   img {
     width: auto;
-    height: 80vh;
+    max-width: 100%;
+    max-height: 80vh;
     margin: 0;
     object-fit: cover;
-
-    @media screen and (min-width: 768px) {
-      max-width: 50vw;
-    }
   }
 `;
 
 const CoverImage = (props) => {
   return (
     <StyledCoverImage>
+      <h3 className="cover-image-title">{props.alt}</h3>
       <img src={props.image} alt={props.alt} />
     </StyledCoverImage>
   );
