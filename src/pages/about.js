@@ -1,11 +1,9 @@
 import React from 'react';
 import client from '../contentful';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Wrapper from '../components/Wrapper';
 
 const About = () => {
   const [page, setPage] = React.useState(null);
-  const [textValue, setTextValue] = React.useState(null);
 
   React.useEffect(() => {
     client
@@ -14,28 +12,8 @@ const About = () => {
       })
       .then((entries) => {
         setPage(entries.items[0]);
-        setTextValue(entries.items[0].fields.info);
       });
   }, []);
-
-  const document = {
-    nodeType: 'document',
-    data: {},
-    content: [
-      {
-        nodeType: 'paragraph',
-        data: {},
-        content: [
-          {
-            nodeType: 'text',
-            value: textValue,
-            marks: [],
-            data: {},
-          },
-        ],
-      },
-    ],
-  };
 
   return (
     <Wrapper>
@@ -46,7 +24,16 @@ const About = () => {
       />
       <h1>{page && page.fields.title}</h1>
       <section className="text-wrapper">
-        {documentToReactComponents(document)}
+        {page &&
+          page.fields.information.content.map((text, i) => {
+            return (
+              <div key={i}>
+                {text.content.map((paragraph, i) => (
+                  <p key={i}>{paragraph.value}</p>
+                ))}
+              </div>
+            );
+          })}
       </section>
     </Wrapper>
   );
