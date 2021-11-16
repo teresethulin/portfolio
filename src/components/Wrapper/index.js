@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 90vw;
-  margin: 0;
+  width: 100vw;
   height: auto;
-  overflow-x: hidden;
+  margin: 0;
   padding: 5vh 5vw;
+  overflow-x: hidden;
 `;
 
 export default Wrapper;

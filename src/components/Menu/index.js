@@ -1,20 +1,21 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "@reach/router";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from '@reach/router';
 
 const StyledMenu = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: peachpuff;
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-  height: 100vh;
-  text-align: left;
-  padding: 4rem;
   position: absolute;
   top: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  height: 100vh;
   margin: 0;
+  padding: 4rem;
+  background: #ededed;
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+  text-align: left;
   transition: transform 0.3s ease-in-out;
 
   @media (max-width: 576px) {
@@ -36,7 +37,7 @@ const StyledMenu = styled.nav`
     }
 
     &:hover {
-      color: white;
+      opacity: 0.6;
     }
   }
 `;

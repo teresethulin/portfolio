@@ -1,19 +1,16 @@
-import React from "react";
-import { Router } from "@reach/router";
-import Home from "./pages/home";
-import SingleProject from "./pages/singleProject";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import Menu from "./components/Menu";
-import Burger from "./components/Burger";
+import React from 'react';
+import { Router } from '@reach/router';
+import './App.scss';
+import Home from './pages/home';
+import SingleProject from './pages/singleProject';
+import About from './pages/about';
+import Contact from './pages/contact';
+import NavBar from './components/NavBar.js';
 
 function App() {
-  const [open, setOpen] = React.useState(false);
-
   return (
     <div>
-      <Burger open={open} setOpen={setOpen} />
-      <Menu open={open} setOpen={setOpen} />
+      <NavBar />
       <Router>
         <Home path="/" />
         <SingleProject path="/:slug" />

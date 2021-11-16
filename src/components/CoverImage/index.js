@@ -1,16 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const StyledCoverImage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
   margin: 0;
   padding-bottom: 5vh;
-  width: 90vw;
   img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 80vh;
     margin: 0;
     object-fit: cover;
+
+    @media screen and (min-width: 768px) {
+      max-width: 50vw;
+    }
   }
 `;
 
