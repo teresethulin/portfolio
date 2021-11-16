@@ -44,12 +44,18 @@ const StyledMenu = styled.nav`
   }
 `;
 
-const Menu = ({ open }) => {
+const Menu = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open}>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/contact">Contact</Link>
+      <Link to="/" onClick={() => setOpen(!open)}>
+        Home
+      </Link>
+      <Link to="/about" onClick={() => setOpen(!open)}>
+        About
+      </Link>
+      <Link to="/contact" onClick={() => setOpen(!open)}>
+        Contact
+      </Link>
     </StyledMenu>
   );
 };
