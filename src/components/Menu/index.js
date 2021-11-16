@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from '@reach/router';
 
 const StyledMenu = styled.nav`
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   top: 0;
   right: 0;
@@ -22,7 +22,6 @@ const StyledMenu = styled.nav`
 
   @media (max-width: 576px) {
     width: 100vw;
-    background-color: white;
   }
 
   a {
