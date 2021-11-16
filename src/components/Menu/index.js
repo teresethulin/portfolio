@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from '@reach/router';
 
 const StyledMenu = styled.nav`
+  z-index: -1;
   position: absolute;
   top: 0;
   right: 0;
@@ -14,20 +15,22 @@ const StyledMenu = styled.nav`
   height: 100vh;
   margin: 0;
   padding: 4rem;
-  background: white;
+  background: #7d90f6;
+  backdrop-filter: blur(20px);
   text-align: left;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.3s ease-in-out;
 
   @media (max-width: 576px) {
     width: 100vw;
+    background-color: white;
   }
 
   a {
-    font-size: 2rem;
     padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 0.001em;
     color: #0000ff;
     text-decoration: none;
     transition: color 0.3s linear;
@@ -38,8 +41,8 @@ const StyledMenu = styled.nav`
     }
 
     &:hover {
-      opacity: 0.2;
-      transition: opacity ease-in 0.2s;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color ease-in 0.2s;
     }
   }
 `;

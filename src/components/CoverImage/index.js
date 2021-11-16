@@ -24,7 +24,7 @@ const StyledCoverImage = styled.section`
 const CoverImage = (props) => {
   return (
     <StyledCoverImage>
-      <h3 className="cover-image-title">{props.alt}</h3>
+      <h2 className="cover-image-title">{props.alt}</h2>
       <img src={props.image} alt={props.alt} />
     </StyledCoverImage>
   );

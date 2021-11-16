@@ -1,22 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
 import Menu from '../Menu/index';
 import Burger from '../Burger/index';
-
-const StyledNav = styled.nav`
-  position: fixed;
-  width: 100vw;
-  height: 70px;
-`;
+import Logo from '../../assets/icons/logo-terese-thulin.svg';
 
 const NavBar = () => {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <StyledNav className="navbar">
+    <nav className="navbar">
+      <img src={Logo} alt="logo" className="logo" />
       <Burger open={open} setOpen={setOpen} />
       <Menu open={open} setOpen={setOpen} />
-    </StyledNav>
+    </nav>
   );
 };
 

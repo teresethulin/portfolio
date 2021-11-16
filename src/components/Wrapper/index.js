@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   height: auto;
   margin: 0;
   padding: 5vh 5vw;
+  padding-top: calc(70px + 5vh);
   overflow-x: hidden;
 `;
 
