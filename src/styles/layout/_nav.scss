@@ -12,13 +12,15 @@ nav {
 }
 
 .logo {
+    z-index: 10000;
+    position: absolute;
+    top: 11px;
+    left: 20px;
     width: auto;
-    height: 70px;
-    margin-top: 20px;
-    margin-left: 20px;
-
-    @media screen and (max-width: 768px) {
-        height: 48px;
-        margin-top: 11px;
+    height: 48px;
+    
+    @media screen and (min-width: 768px) {
+        top: 20px;
+        height: 70px;
     }
 }
