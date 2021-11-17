@@ -1,3 +1,7 @@
+.project-category {
+    text-transform: uppercase;
+}
+
 .project-title {
     @include h1();
 }

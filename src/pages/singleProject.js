@@ -18,8 +18,6 @@ const SingleProject = (props) => {
 
   return (
     <Wrapper>
-      <h1 className="project-title">{project && project.fields.title}</h1>
-      <p className="project-text">{project && project.fields.info}</p>
       {
         <img
           src={project && project.fields.coverImage.fields.file.url}
@@ -31,6 +29,9 @@ const SingleProject = (props) => {
           }}
         />
       }
+      <p className="project-category">{project && project.fields.category}</p>
+      <h1 className="project-title">{project && project.fields.title}</h1>
+      <p className="project-text">{project && project.fields.info}</p>
     </Wrapper>
   );
 };

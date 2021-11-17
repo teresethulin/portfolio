@@ -9,7 +9,7 @@ const StyledCoverImage = styled.section`
   justify-content: center;
   width: 100%;
   margin: 0;
-  padding: 5vh 5vw;
+  padding: 5vh 12vw;
   text-decoration: none;
   scroll-behavior: smooth;
   scroll-snap-align: start;
