@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   padding-top: calc(70px + 5vh);
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
+
+  @media screen and (min-width: 1024px) {
+    padding: 5vh 12vw;
+  }
 `;
 
 export default Wrapper;
