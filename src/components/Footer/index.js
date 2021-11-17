@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from '@reach/router';
 import GitHub from '../../assets/icons/github-logo.svg';
 import LinkedIn from '../../assets/icons/linkedin-logo.svg';
 import Codepen from '../../assets/icons/codepen.svg';
@@ -14,18 +13,18 @@ const Footer = () => {
         {new Date().getUTCFullYear()}
       </p>
       <div className="icons-wrapper">
-        <Link to="https://github.com/teresethulin">
+        <a href="https://github.com/teresethulin">
           <img src={GitHub} alt="Github" className="icon" />
-        </Link>
-        <Link to="https://www.linkedin.com/in/teresethulin/">
+        </a>
+        <a href="https://www.linkedin.com/in/teresethulin/">
           <img src={LinkedIn} alt="LinkedIn" className="icon" />
-        </Link>
-        <Link to="https://codepen.io/teresethulin">
+        </a>
+        <a href="https://codepen.io/teresethulin">
           <img src={Codepen} alt="Codepen" className="icon" />
-        </Link>
-        <Link to="https://www.behance.net/teresethulin">
+        </a>
+        <a href="https://www.behance.net/teresethulin">
           <img src={Behance} alt="Behance" className="icon" />
-        </Link>
+        </a>
       </div>
     </footer>
   );
