@@ -12,7 +12,6 @@ const SingleProject = (props) => {
         'fields.slug': props.slug,
       })
       .then((entries) => {
-        console.log(entries);
         setProject(entries.items[0]);
       });
   }, [props.slug]);
