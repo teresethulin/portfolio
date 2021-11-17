@@ -23,7 +23,7 @@ const SingleProject = (props) => {
         <img
           src={project && project.fields.coverImage.fields.file.url}
           alt={project && project.fields.title}
-          className="project-img"
+          className="hero-image"
         />
       }
       <p className="project-category">{project && project.fields.category}</p>
@@ -38,10 +38,19 @@ const SingleProject = (props) => {
             </div>
           );
         })}
-      {project &&
-        project.fields.media.map((image, i) => {
-          return <img key={i} src={image.fields.file.url} alt="" />;
-        })}
+      <section className="grid">
+        {project &&
+          project.fields.media.map((image, i) => {
+            return (
+              <img
+                key={i}
+                src={image.fields.file.url}
+                alt=""
+                className="grid-image"
+              />
+            );
+          })}
+      </section>
     </Wrapper>
   );
 };
