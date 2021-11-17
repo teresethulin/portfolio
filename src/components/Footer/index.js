@@ -14,16 +14,16 @@ const Footer = () => {
         {new Date().getUTCFullYear()}
       </p>
       <div className="icons-wrapper">
-        <Link to="/">
+        <Link to="https://github.com/teresethulin">
           <img src={GitHub} alt="Github" className="icon" />
         </Link>
-        <Link to="/">
+        <Link to="https://www.linkedin.com/in/teresethulin/">
           <img src={LinkedIn} alt="LinkedIn" className="icon" />
         </Link>
-        <Link to="/">
+        <Link to="https://codepen.io/teresethulin">
           <img src={Codepen} alt="Codepen" className="icon" />
         </Link>
-        <Link to="/">
+        <Link to="https://www.behance.net/teresethulin">
           <img src={Behance} alt="Behance" className="icon" />
         </Link>
       </div>
