@@ -12,6 +12,7 @@ const SingleProject = (props) => {
         'fields.slug': props.slug,
       })
       .then((entries) => {
+        console.log(entries);
         setProject(entries.items[0]);
       });
   }, [props.slug]);
@@ -21,17 +22,26 @@ const SingleProject = (props) => {
       {
         <img
           src={project && project.fields.coverImage.fields.file.url}
-          alt=""
-          style={{
-            width: '90vw',
-            height: 'auto',
-            objectFit: 'cover',
-          }}
+          alt={project && project.fields.title}
+          className="project-img"
         />
       }
       <p className="project-category">{project && project.fields.category}</p>
       <h1 className="project-title">{project && project.fields.title}</h1>
-      <p className="project-text">{project && project.fields.info}</p>
+      {project &&
+        project.fields.description.content.map((text, i) => {
+          return (
+            <div key={i}>
+              {text.content.map((paragraph, i) => (
+                <p key={i}>{paragraph.value}</p>
+              ))}
+            </div>
+          );
+        })}
+      {project &&
+        project.fields.media.map((image, i) => {
+          return <img key={i} src={image.fields.file.url} alt="" />;
+        })}
     </Wrapper>
   );
 };
