@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const CoverImage = (props) => {
   return (
-    <div className="project-wrapper">
+    <div className="cover-image-wrapper">
       <h1 className="cover-image-title">{props.alt}</h1>
       <img src={props.image} alt={props.alt} />
     </div>

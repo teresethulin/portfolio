@@ -1,6 +1,5 @@
 import React from 'react';
 import client from '../contentful';
-import Wrapper from '../components/Wrapper';
 
 const SingleProject = (props) => {
   const [project, setProject] = React.useState(null);
@@ -17,7 +16,7 @@ const SingleProject = (props) => {
   }, [props.slug]);
 
   return (
-    <Wrapper>
+    <div className="project-wrapper">
       {
         <img
           src={project && project.fields.coverImage.fields.file.url}
@@ -25,18 +24,23 @@ const SingleProject = (props) => {
           className="hero-image"
         />
       }
-      <p className="project-category">{project && project.fields.category}</p>
-      <h1 className="project-title">{project && project.fields.title}</h1>
-      {project &&
-        project.fields.description.content.map((text, i) => {
-          return (
-            <div key={i}>
-              {text.content.map((paragraph, i) => (
-                <p key={i}>{paragraph.value}</p>
-              ))}
-            </div>
-          );
-        })}
+
+      <div className="text-wrapper">
+        <p className="project-category">{project && project.fields.category}</p>
+        <h1 className="project-title">{project && project.fields.title}</h1>
+
+        {project &&
+          project.fields.description.content.map((text, i) => {
+            return (
+              <div key={i}>
+                {text.content.map((paragraph, i) => (
+                  <p key={i}>{paragraph.value}</p>
+                ))}
+              </div>
+            );
+          })}
+      </div>
+
       <section className="grid">
         {project &&
           project.fields.media.map((image, i) => {
@@ -50,7 +54,7 @@ const SingleProject = (props) => {
             );
           })}
       </section>
-    </Wrapper>
+    </div>
   );
 };
 

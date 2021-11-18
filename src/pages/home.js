@@ -22,7 +22,7 @@ const Home = () => {
       {projects &&
         projects.map((project, i) => {
           return (
-            <Link to={project.fields.slug} key={i} className="project-link">
+            <Link to={project.fields.slug} key={i} className="cover-image-link">
               <CoverImage
                 image={project.fields.coverImage.fields.file.url}
                 alt={project.fields.title}

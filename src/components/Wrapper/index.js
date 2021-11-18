@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   overflow-x: hidden;
 
   @media screen and (min-width: 1024px) {
-    padding: 25vh 12vw 5vh;
+    padding: 0;
   }
 `;
 
